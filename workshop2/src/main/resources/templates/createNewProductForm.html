@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile Form</title>
+<link rel="stylesheet" th:href="@{/css/personForm.css}" />
+</head>
+<body>
+
+
+	<h1>Voeg een nieuw product toe aan het assortiment</h1>
+	<p>Huidige productenlijst</p>
+	<table class="databaseProductList">
+		<tr>
+			<th>Naam</th>
+			<th>Prijs</th>
+			<th>Voorraad</th>
+		</tr>
+		<tr th:each="product: ${productList}">
+			<td th:text="${product.name}"></td>
+			<td th:text="${product.price}"></td>
+			<td th:text="${product.stock}"></td>
+		</tr>
+	</table>
+	<br><br>
+
+	<!--  											Profile Form											 -->
+	<form method="POST" th:action="@{/product/createNewProduct}"
+		th:object="${product}">
+
+		<label class="formDetails" for="name">Naam: </label> 
+		<input type="text" name="name" placeholder="verplicht veld" th:field="*{name}" /> 
+		<span class="validationError" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span> </br> 
+		
+		<label class="formDetails" for="price">Prijs: </label> 
+		<input type="text" name="price" placeholder="verplicht veld" th:field="*{price}" /> 
+		<span class="validationError" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></span> </br> 
+		
+		<label class="formDetails" for="stock">Aantal: </label> 
+		<input type="text" name="stock" placeholder="verplicht veld" th:field="*{stock}" /> 
+		<span class="validationError" th:if="${#fields.hasErrors('stock')}" th:errors="*{stock}"></span> </br>
+        <p></p>
+        <input class="buttonLogin" type="submit" value="Verzend"/>
+
+	</form>
+
+
+</body>
+</html>

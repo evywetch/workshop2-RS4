@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Form</title>
+    <link rel="stylesheet" th:href="@{/css/currentOrder.css}"/>
+</head>
+<body>
+<h1>Mijn bestellingen</h1>
+
+<table class="databaseProductList">
+    <tr>
+        <th>Bestellingnummer</th>
+        <th>Bestellingsdatum</th>
+        <th>Totale prijs</th>
+        <th>Status</th>
+    </tr>
+    </br>
+
+    <tr th:each="order: ${orderList}">
+        <td th:text="${order.orderId}"></td>
+        <td th:text="${order.orderDateTime}"></td>
+        <td th:text="${order.totalPrice}"></td>
+        <td th:text="${order.orderStatus}"></td>
+    </tr>
+</table>
+</br>
+<h4 class="headerForSearchOrder">Vul het bestelnummer in van de bestelling die u wilt bekijken</h4>
+<p>
+    <span class="formDetails" th:text="${message}">Message</span>
+</p>
+<form method="POST" th:action="@{/order/showOrderDetails}" th:object="${orderId}">
+
+    <label class="formDetails" for="orderId">orderId: </label> <input type="text" name="orderId"
+                                                                      placeholder="bestelnummer"/>
+    <input class="button" type="submit" value="Bekijk"/>
+
+</form>
+
+</body>
+</html>

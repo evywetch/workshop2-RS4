@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+    <link rel="stylesheet" th:href="@{/css/links.css}"/>
+</head>
+<body>
+
+	<header> Projecten</header>
+
+	<nav>
+		<ul>
+			<li><a th:href="@{/}">Home</a></li>
+			<li><a th:href="@{/login}">Inloggen</a></li>
+			<li><a th:href="@{/teamNevvo}">Team Nevvo</a></li>
+			<li><a th:href="@{/projects}">Projecten</a></li>
+			<li><a th:href="@{/contact}">Contact</a></li>
+			<li><a th:href="@{/links}">Links</a></li>
+		</ul>
+
+	</nav>
+	</br>
+
+    <main>
+        <h3> Dit is een korte introductie van wat Team Nevvo heeft gedaan</h3>
+        <ol>
+            <li>Console Applicatie</li>
+            <li>Web Applicatie "Nevvo Meubels"</li>
+            <li>OCA (optioneel)</li>
+        </ol>
+
+    </main>
+    <img th:src="@{/images/nevvoMeubel4.jpg}" alt="nevvoMeubels"
+         class="image"/>
+	<div class="footer">Team Nevvo 2018 | All rights are reserved</div>
+</body>
+</html>

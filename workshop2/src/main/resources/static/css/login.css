@@ -1,0 +1,79 @@
+body {
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times,
+    "Times New Roman", "serif";
+    font-variant-caps: small-caps;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+
+header {
+    margin-bottom: 20px;
+    font-size: 40px;
+    border-bottom: 5px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+h1 {
+    border-bottom: 5px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+.validationError {
+    color: red;
+}
+
+.formDetails {
+    display: inline-block;
+    width: 210px;
+    text-align: right;
+    text-align: left;
+    padding: 5px;
+}
+
+.newAccountLink {
+    color: red;
+    text-decoration: none;
+}
+
+.newAccountLink:hover {
+    text-decoration: none;
+    border-bottom: 2px solid black;
+}
+
+.image {
+    width: 900px;
+}
+
+.buttonLogin {
+    background-color: darkgrey;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;;
+}
+
+.buttonLogin:hover {
+    color: black;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    opacity: .9;
+    height: 25px;
+}

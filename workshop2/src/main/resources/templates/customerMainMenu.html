@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Nevvo Meubels</title>
+<link rel="stylesheet" th:href="@{/css/customerMainMenu.css}" />
+</head>
+<body>
+
+
+<div class="header">
+		<div class="intro">
+            <h2 class="customerName">Welkom <span th:text="${person.name}">Name</span> <span
+                    th:text="${person.lastName}">Last name</span>!</h2>
+		</div>
+    <div class="listItem">
+        <a class="hyperLinks" th:href="@{/customer/personDetails}"> Mijn account</a>
+		</div>
+    <div class="listItem">
+        <a class="hyperLinks" th:href="@{/order}"> Mijn Bestellingen</a>
+		</div>
+    <div class="listItem">
+        <a class="hyperLinks" th:href="@{/orderLine}"> Producten Bestellen</a>
+		</div>
+
+    <div class="listItem">
+		<a class="hyperLinks" th:href="@{/customer/logout}"> Uitloggen</a>
+		</div>
+	</div>
+	
+	<p>
+		<span class="formDetails" th:text="${infoMessage}">Message</span>
+	</p>
+	
+	<div class="main">
+		<p>Nevvo Meubels biedt een bonte verzameling van uitgesproken
+			meubilair en originele accessoires. Dit zorgt voor verrassende
+			combinaties en een uniek en eigen interieur. Een bezoek aan Nevvo Meubels
+			brengt je inspiratie en daarmee nieuwe ideeen. Of dit nou in een van
+			onze vier winkels is of in onze webshop.</p>
+		
+		<img th:src="@{/images/nevvoMeubel.jpg}" alt="nevvoMeubels" id="nevvoMeubel" class="image"/>
+	</div>
+<div class="footer">Team Nevvo 2018 | All rights are reserved</div>
+</body>
+</html>
